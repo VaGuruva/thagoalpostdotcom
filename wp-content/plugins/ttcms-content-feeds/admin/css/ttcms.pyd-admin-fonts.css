@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'omb';
+    src:url('fonts/omb.eot?-x1zp94');
+    src:url('fonts/omb.eot?#iefix-x1zp94') format('embedded-opentype'),
+    url('fonts/omb.woff?-x1zp94') format('woff'),
+    url('fonts/omb.ttf?-x1zp94') format('truetype'),
+    url('fonts/omb.svg?-x1zp94#omb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="omb-icon-"], [class*=" omb-icon-"] {
+    font-family: 'omb';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.omb-icon-checkmark-out:before {
+    content: "\e015";
+}
+.omb-icon-cancel:before {
+    content: "\e016";
+}
+.omb-icon-plus:before {
+    content: "\e017";
+}
+.omb-icon-minus:before {
+    content: "\e018";
+}
+.omb-icon-notice:before {
+    content: "\e600";
+}
+.omb-icon-cog:before {
+    content: "\e019";
+}
+.omb-icon-download:before {
+    content: "\e603";
+}
+.omb-icon-download2:before {
+    content: "\e604";
+}
+.omb-icon-dollar:before {
+    content: "\e605";
+}
+.omb-icon-coins:before {
+    content: "\e606";
+}
+.omb-icon-checked:before {
+    content: "\e01a";
+}
+.omb-icon-error:before {
+    content: "\e01b";
+}
+.omb-icon-add:before {
+    content: "\e01c";
+}
+.omb-icon-minus2:before {
+    content: "\e01d";
+}
+.omb-icon-ticket:before {
+    content: "\e601";
+}
+.omb-icon-coin:before {
+    content: "\e602";
+}
+.omb-icon-spinner:before {
+    content: "\e01e";
+}

@@ -1,0 +1,46 @@
+@import "ttcms.pyd-admin-fonts.css";
+
+/**
+ * All of the CSS for your dashboard-specific functionality should be
+ * included in this file.
+ */
+#adminmenu #toplevel_page_onnet-payu-debits-batches .menu-icon-generic div.wp-menu-image::before {
+    font-family: omb !important;
+    content: "\e606";
+    font-size: 1.5em !important;
+}
+
+.onnet-payu-debits-batches .tablenav.top {
+    display: none;
+}
+
+.wp-list-table .icon-button {
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.wp-list-table.batches td .icon-green, .wp-list-table.transactions td .icon-green {
+    color: green
+}
+
+.wp-list-table.batches td .icon-orange, .wp-list-table.transactions td .icon-orange {
+    color: orange
+}
+
+.wp-list-table.batches td .icon-red, .wp-list-table.transactions td .icon-red {
+    color: red
+}
+
+.wp-list-table.batches td .icon-status,
+.wp-list-table.transactions td .icon-status {
+    font-size: 1.9em;
+}
+
+.wp-list-table.batches .column-status, .wp-list-table.transactions .column-status {
+    width: 50px;
+    text-align: center;
+}
+
+.wp-list-table.batches .column-actions, .wp-list-table.transactionss .column-actions {
+    width: 100px;
+}

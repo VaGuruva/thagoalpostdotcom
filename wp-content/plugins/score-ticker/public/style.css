@@ -1,0 +1,678 @@
+#score_container {
+  position: relative;
+  width: 100%;
+}
+
+@media only screen and (max-width: 991px){
+    #score_container .col-xs-6 {
+        position: relative;
+        width: 50%;
+    }
+    #score_container {
+        position: relative;
+        z-index: 0;
+    }
+}
+
+#score_container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#score_container .wrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: transparent;
+  /* Patch for IE */
+  z-index: 1;
+}
+#score_container .wrapper .score_tabs_wrapper {
+  overflow: hidden;
+}
+#score_container .wrapper .score_tabs_wrapper .score_tabs {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  float: left;
+  overflow: hidden;
+  margin-right: -30000px;
+}
+#score_container .wrapper .score_tabs_wrapper .score_tabs li {
+  float: left;
+  padding: 0 10px;
+  font-size: 11px;
+  color: #fff;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-right: 1px solid #000;
+  background: url("../img/tab_bg.png") repeat-x;
+  cursor: pointer;
+}
+#score_container .wrapper .score_tabs_wrapper .score_tabs li.selected {
+  font-style: italic;
+  background: url("../img/tab_selected_bg.png") repeat-x;
+}
+#score_container .wrapper .score_tabs_wrapper .score_tabs li.selected img {
+  display: inline;
+}
+#score_container .wrapper .score_tabs_wrapper .score_tabs li img {
+  display: none;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+#score_container .wrapper .score_tabs_wrapper .score_tabs li img.all_score {
+  display: inline;
+  margin-top: -3px;
+}
+#score_container .wrapper .score_display_wrapper {
+  position: relative;
+}
+#score_container .wrapper .score_display_wrapper .score_display {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  margin-left: 31px;
+  margin-right: 31px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+@media only screen and (min-width : 960px) {
+  #score_container .wrapper .score_display_wrapper .score_display {
+    width: 708px;
+  }
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul {
+  float: left;
+  overflow: hidden;
+  margin-right: -30000px;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li {
+  float: left;
+  height: 72px;
+  padding: 0 10px;
+  color:#333;
+  background-color: #333333;
+  border-left: 1px solid #72abdc;
+  border-right: 1px solid #fff;
+  overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li p {
+  font-size: 10px;
+  color: #626262;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li .time {
+    margin-top: 19px;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li .tournament {
+  font-size: 9px;
+  line-height: 11px;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li .team,
+#score_container .wrapper .score_display_wrapper .score_display ul li .score {
+  font-size: 11px;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li div {
+  float: left;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li div p {
+  line-height: 10px;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li div.player {
+  margin-right: 3px;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li div.score {
+  overflow: hidden;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li div.score div {
+  padding: 0 4px;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li div.score div:first-child {
+  border-left: none;
+}
+#score_container .wrapper .score_display_wrapper .score_display ul li div.score div p {
+  font-size: 9px;
+}
+#score_container .wrapper .score_display_wrapper .score_display #loading_icon {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  display: none;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#score_container .wrapper .score_display_wrapper .move_left,
+#score_container .wrapper .score_display_wrapper .move_right {
+  position: absolute;
+  top: 0;
+  width: 31px;
+  height: 72px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+@media screen and (max-width: 991px) {
+    #score_container .wrapper .score_display_wrapper .move_left,
+    #score_container .wrapper .score_display_wrapper .move_right {
+        z-index: 100000;
+        width: 62px;
+    }
+    #score_container .wrapper .score_display_wrapper .move_left img,
+    #score_container .wrapper .score_display_wrapper .move_right img {
+        width: 31px !important;
+    }
+    #score_container .wrapper .score_display_wrapper .score_display {
+        /*margin-left: 62px;*/
+        /*margin-right: 62px;*/
+    }
+}
+
+#score_container .wrapper .score_display_wrapper .move_left img,
+#score_container .wrapper .score_display_wrapper .move_right img {
+  width: 31px;
+  height: 72px;
+}
+
+#score_container .wrapper .score_display_wrapper .move_left {
+  left: 0;
+}
+
+@media only screen and (min-width : 960px) {
+  #score_container .wrapper .score_display_wrapper .move_left {
+    left: 0;
+  }
+}
+
+#score_container .wrapper .score_display_wrapper .move_right {
+  right: 0;
+}
+#score_container .wrapper .score_display_wrapper .full_score, #score_container .wrapper .score_display_wrapper .smallad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88px;
+  height: 34px;
+  background: url("../img/full_score_bg.png") repeat-x;
+  cursor: pointer;
+}
+#score_container .wrapper .score_display_wrapper .full_score p {
+  font-size: 10px;
+  color: #deecf8;
+  padding: 5px;
+}
+#score_container .wrapper .score_display_wrapper .full_score img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+}
+html.ie7 #score_container .wrapper .score_tabs_wrapper .score_tabs li img.all_score {
+  margin-top: 0;
+}
+
+/*Grant*/
+
+/* Global Items */
+#score_container .clear {
+  clear: both;
+}
+
+/* Basic Grid Layout */
+
+#score_container .left {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width : 960px) {
+    #score_container .left {
+    width: 20%;
+    float: left;
+  }
+}
+
+#score_container .right {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+@media only screen and (min-width : 960px) {
+    #score_container .right {
+    width: 80%;
+    float: right;
+  }
+}
+
+/* Drop Down */
+
+
+/* Ticker Warpper */
+
+#score_container .wrapper .score_display_wrapper .score_display ul li {
+  float: left;
+  background: #333333;
+  border: none;
+  overflow: hidden;
+  font-family: "oswaldlight", sans-serif;
+  display: block;
+  color: #fff;
+  overflow: hidden;
+  zoom: 1;
+  text-align: center;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 236px;
+    margin: 0 1px 0 0;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li.li-tennis {
+  padding: 0 16px 0 0;
+  background: transparent url("images/bg-tennis.png") repeat-x top left;
+}
+
+/*Football overlay*/
+.score_container--overlay {
+    background: url("images/fsa-overlay-vignette-bg.png") no-repeat !important;
+    width: 100%;
+    padding: 0 8px;
+    height: 100%;
+}
+
+.slider-standings-title {
+    position: absolute;
+    color: #F1CA09;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    top: 6px;
+    width: 100%;
+}
+/* 2016-01-06 */
+#score_container .wrapper .score_display_wrapper .score_display ul li .slider-standings-item-team1 {
+    float: left;
+    /*width: 79px;*/
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .slider-standings-item-team2 {
+    float: right;
+    /*width: 79px;*/
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+
+#score_container .slider-standings-item-logo {
+    width: 35px;
+    height: 35px;
+    float: left;
+    display: block;
+    position: relative;
+    margin: 0 10px 7px 10px;
+}
+
+#score_container .slider-standings-item-logo span {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+#score_container .slider-standings-item-logo img {
+  width: auto;
+  position: relative;
+  z-index: 0;
+  height: 32px;
+  padding: 0;
+}
+
+
+
+#score_container .wrapper .score_display_wrapper .score_display ul li div .slider-standings-item-logo div {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: 1px;
+  position: absolute;
+  border:solid 1px transparent;
+  bottom: -19px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+    width: 100px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .slider-standings-item-score {
+    font-family: "oswaldlight", sans-serif;
+    float: left;
+    width: 37px;
+    text-align: center;
+    font-size: 22px;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 3px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .slider-standings-item-score.cricket {
+    font-family: "oswaldlight", sans-serif;
+    float: left;
+    width: 39px;
+    text-align: center;
+    font-size: 15px;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 3px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .slider-standings-item-score-overs-left {
+    font-size: 10px;
+    color: #F1CA09;
+    width: 25%;
+    text-align: left;
+    position: absolute;
+    top: 40px;
+    left: 55px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .slider-standings-item-score-overs-right {
+    font-size: 10px;
+    color: #F1CA09;
+    width: 25%;
+    position: absolute;
+    top: 40px;
+    right: 37px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .time {
+    font-family: "oswaldlight", sans-serif;
+    font-size: 14px;
+    color: #f3c807;
+    text-transform: uppercase;
+    line-height: 34px;
+    display: inline-block;
+}
+
+#score_container .left {
+  background: #00BFFF;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  height: 72px;
+  padding: 12px 15px 4px 15px;
+}
+
+@media only screen and (max-width: 991px){
+    #score_container .left {
+        width: 100%;
+        margin-bottom: 0px;
+        height: 40px;
+        border-bottom: solid 1px #F78E6C;
+    }
+    div.tournament-controls-wrapper.dropdown > a.standings-controls-dropdown-toggle > span {
+        text-align: right;
+        padding-right: 26px;
+        position: relative;
+    }
+    div.standings-controls-dropdown-wrapper > a.standings-controls-dropdown-toggle > span {
+        text-align: left;
+        width: 42%;
+    }
+}
+
+
+/* Dropdown menu */
+.standings-controls-dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  font-family: "oswaldlight", sans-serif;
+  font-size: 14px;
+  margin-top: 1px;
+  display: block;
+}
+
+.standings-controls-dropdown-toggle:visited {
+  color: white;
+}
+
+.standings-controls-dropdown-toggle .lowercase-dropdown {
+  background: transparent url("images/bg-dropdown2.png") no-repeat center right;
+  display: block;
+  font-size: 14px;
+  font-family: "oswaldlight", sans-serif;
+    padding-top: 7px;
+  line-height: 1;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px){
+    .standings-controls-dropdown-toggle .lowercase-dropdown {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background: none;
+    }
+    .standings-controls-dropdown-toggle .lowercase-dropdown:after {
+        content: "\f0d7";
+        font-family: 'fontawesome';
+        right: -20px;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width : 1056px) {
+    .standings-controls-dropdown-toggle .lowercase-dropdown {
+      text-align: left;
+  }
+}
+
+.standings-controls-dropdown-toggle .uppercase-dropdown {
+  background: transparent url("images/bg-dropdown.png") no-repeat center right;
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "oswaldlight", sans-serif;
+  border-bottom: 1px solid #040005;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px){
+    .standings-controls-dropdown-toggle .uppercase-dropdown {
+        border-bottom: none;
+        padding-bottom: 10px;
+        background: none;
+    }
+    .standings-controls-dropdown-toggle .uppercase-dropdown:after {
+        content: "\f0d7";
+        font-family: 'fontawesome';
+        right: -20px;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width : 1056px) {
+    .standings-controls-dropdown-toggle .uppercase-dropdown {
+      text-align: left;
+  }
+}
+
+
+.standings-controls-dropdown-list > li > a,
+.tournament-controls > li > a {
+  text-decoration: none;
+}
+
+.tournament-controls {
+  position: absolute;
+  display: none;
+  width: 100%;
+}
+
+.tournament-controls-football {
+  z-index: 9998;
+  display: block;
+}
+
+.tournament-controls-rugby,
+.tournament-controls-cricket {
+  z-index: 2;
+  display: none;
+}
+
+.dropdown-menu {
+  z-index: 9999;
+  width: 100%;
+}
+.dropdown-menu > li {
+    font-family: 'oswaldlight', sans-serif;
+}
+.dropdown-menu > li  {
+    white-space: inherit;
+}
+
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .tennis-left {
+  float: left;
+  width: 55px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .tennis-right {
+  width: 162px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .mens-singles-block {
+  background: #0059b5;
+  width: 55px;
+  height: 38px;
+  float: none;
+  text-transform: uppercase;
+  font-size: 8px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .final-block {
+  background: #004d9d;
+  width: 55px;
+  height: 38px;
+  float: none;
+  text-transform: uppercase;
+  font-size: 9px;
+  padding-top: 12px;
+  box-sizing: border-box;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li div.player {
+  text-align: left;
+  padding-top: 4px;
+  overflow: hidden;
+  width: 85px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .player p {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  height: 15px;
+  overflow: hidden;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .player .player-firstname {
+  width: 10px;
+  overflow: hidden;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li .tournament {
+  color: #d0b523;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-size: 8px;
+  height: 11px;
+  overflow: hidden;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li div.score {
+  padding-top: 8px;
+  float: right;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li div.score div {
+  padding: 0 0 0 4px;
+}
+
+#score_container .wrapper .score_display_wrapper .score_display ul li div.score div p {
+  color: #fff;
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    #score_container .wrapper .score_display_wrapper .score_display ul li:last-child {
+        /*margin-right: 62px;*/
+    }
+    #score_container .wrapper .score_display_wrapper .score_display #loading_icon {
+        left:40%;
+        -webkit-transform: translateX(-40%);
+        transform: translateX(-40%);
+    }
+    #score_container .wrapper .score_display_wrapper .score_display ul li {
+        width: 236px;
+        z-index: 1;
+    }
+    #score_container .wrapper .score_display_wrapper .move_right img{
+        position: relative;
+        right: -26px !important;
+    }
+    #score_container .wrapper .score_display_wrapper .move_left img{
+        margin-left: 5px !important;
+    }
+    div.score-ticker {
+        position: relative;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #score_container .wrapper .score_display_wrapper .move_right img{
+        position: relative;
+        right: -26px !important;
+    }
+    #score_container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #score_container .wrapper .score_display_wrapper .move_right img{
+        position: relative;
+        right: -31px !important;
+    }
+    #score_container {
+        position: relative;
+        z-index: 2;
+    }
+    #score_container .wrapper .score_display_wrapper .score_display #loading_icon {
+        left:46%;
+    }
+}
